@@ -1,12 +1,13 @@
 # angular2-boilerplate
 Angular 2 authentication fullstack boilerplate
 
-#instalation
+## instalation
 'git clone <url>
 cd angular2-boilerplate
 'npm install
 
-#runing
+## runing
 'npm start
-or 
+
+## build project
 'npm run build
