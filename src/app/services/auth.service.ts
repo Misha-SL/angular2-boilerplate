@@ -8,8 +8,8 @@ export class AuthService implements CanActivate {
   constructor(private router: Router) {}
 
   canActivate() {
-    console.log("tokenNotExpired", tokenNotExpired());
-    if (tokenNotExpired()) {
+    //console.log("tokenNotExpired", tokenNotExpired());
+    if (tokenNotExpired('id_token')) {
       return true;
     }
 

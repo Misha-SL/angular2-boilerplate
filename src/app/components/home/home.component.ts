@@ -14,9 +14,7 @@ const template = require('./home.component.html');
 })
 export class HomeComponent { 
   jwt: string;
-  decodedJwt: string;
   response: string;
-  api: string;
   window: WindowService;
 
   constructor(
@@ -38,11 +36,29 @@ export class HomeComponent {
     this.callApi('http://localhost:8081/api/version');
   }
 
-  callApi(url: string) {
+  callInfoApi() {
+    this.callPotectedApi('http://localhost:8081/api/info');
+  }
+
+  callInfoApi_anonymus() {
+    this.callApi('http://localhost:8081/api/info');
+  }
+
+  callPotectedApi(url: string) {
     this.response = null;
     // For non-protected routes, just use Http
     // For protected routes, use AuthHttp
     this.authHttp.get(url)
+      .subscribe(
+        response => this.response = response.text(),
+        error => this.response = error.text()
+      );
+  }
+  callApi(url: string) {
+    this.response = null;
+    // For non-protected routes, just use Http
+    // For protected routes, use AuthHttp
+    this.http.get(url)
       .subscribe(
         response => this.response = response.text(),
         error => this.response = error.text()

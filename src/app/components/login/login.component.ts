@@ -24,11 +24,12 @@ export class LoginComponent {
     contentHeaders.append('Accept', 'application/json');
     contentHeaders.append('Content-Type', 'application/json');
 
-    this.http.post('http://localhost:3001/api/login', body, { headers: contentHeaders })
+    this.http.post('http://localhost:8081/api/signin', body, { headers: contentHeaders })
       .subscribe(
         response => {
           console.log("Done:", response.json().id_token);
           localStorage.setItem('access_token', response.json().id_token)
+          localStorage.setItem('token', response.json().id_token);
           localStorage.setItem('id_token', response.json().id_token);
           this.router.navigate(['home']);
         },
