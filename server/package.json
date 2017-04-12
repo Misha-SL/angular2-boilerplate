@@ -1,10 +1,10 @@
 {
-  "name": "chuck-norris-quotes-api",
-  "version": "0.1.0",
-  "description": "Chuck Norris Quotes API",
+  "name": "angular4boilerplate-apiserver",
+  "version": "1.0.0",
+  "description": "Angular4-boilerplate API Server",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -14,7 +14,7 @@
     "jwt",
     "auth0"
   ],
-  "author": "Martin Gontovnikas",
+  "author": "Mikhail Liulkovich",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/auth0/in-memory-todo/issues"
