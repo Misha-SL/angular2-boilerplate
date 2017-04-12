@@ -5,7 +5,9 @@ This library provides the basic building blocks for building Angular-2 applicati
 
 It also comes initialized with npm commands to easily build components, directives, services, and pipes through the command line. More on that later in the readme.
 
-## Instalation
+## Front-end
+
+### Instalation
 ```
 git clone https://github.com/Misha-SL/angular2-boilerplate.git
 
@@ -13,12 +15,12 @@ cd angular2-boilerplate
 
 npm install
 ```
-## Runing front-end
+### Runing front-end
 ```
 npm start
 ```
 
-## Build angular project
+### Build angular project
 ```
 npm run build
 ```
