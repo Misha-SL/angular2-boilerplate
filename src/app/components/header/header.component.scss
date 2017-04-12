@@ -1,0 +1,9 @@
+@import "../../../vars.scss";
+
+.header {
+    .navbar-brand {
+        color: $header-projectname-fntcolor;
+        font-family: serif;
+        font-size: 24px;
+    }
+}
