@@ -28,8 +28,8 @@ export class LoginComponent {
       .subscribe(
         response => {
           console.log("Done:", response.json().id_token);
-          localStorage.setItem('access_token', response.json().id_token)
-          localStorage.setItem('token', response.json().id_token);
+          //localStorage.setItem('access_token', response.json().id_token)
+          //localStorage.setItem('token', response.json().id_token);
           localStorage.setItem('id_token', response.json().id_token);
           this.router.navigate(['home']);
         },
